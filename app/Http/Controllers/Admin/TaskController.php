@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\task;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -15,7 +16,8 @@ class TaskController extends Controller
 
     public function index()
     {
-        return view('list_of_tasks');
+        $data['tasks']=Task::all();
+        return view('list_of_tasks',$data);
     }
 
     /**
@@ -25,7 +27,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        //
+        return view('add_to_list');
     }
 
     /**
@@ -36,7 +38,10 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+//        dd($request->all());
+        $data=$request->except(['_token']);
+        Task::create($data);
+        return redirect(route('Tasks.index'));
     }
 
     /**
@@ -58,7 +63,8 @@ class TaskController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['task']=Task::find($id);
+        return view('edit_task')->with($data);
     }
 
     /**
@@ -81,6 +87,7 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Task::destroy($id);
+        return redirect()->back();
     }
 }

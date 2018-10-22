@@ -15,16 +15,9 @@ class CreateTasksTable extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user_name');
+            $table->string('customer_name');
             $table->text('phone');
             $table->string('device_name');
-            $table->string('model');
-            $table->string('problem');
-            $table->string('IMEI');
-            $table->string('SIM');
-            $table->string('SD');
-            $table->boolean('status');
-            $table->boolean('process');
             $table->timestamps();
         });
     }

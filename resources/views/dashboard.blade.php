@@ -2,7 +2,7 @@
 @section('content')
     <div class="row row-eq-height my-3">
         <div class="col-md-3 col-sm-6">
-            <a href="{{route('Tasks.index')}}" class="">
+            <a href="{{route('Tasks.index')}}" class="text-primary">
                 <div class="card no-b mb-3">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
@@ -19,49 +19,53 @@
             </a>
         </div>
         <div class="col-md-3 col-sm-6">
-            <div class="card no-b mb-3">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div><i class="icon-user-circle-o s-18"></i></div>
-                        <div><span class="badge badge-pill badge-danger">4:30</span></div>
+            <a href="#" class="text-success">
+                <div class="card no-b mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><i class="icon-work s-18"></i></div>
+                            <div><span class="badge badge-pill badge-danger">4:30</span></div>
+                        </div>
+                        <div class="text-center">
+                            <div class="s-48 my-3 font-weight-lighter">170</div>
+                            Finished Work
+                        </div>
                     </div>
-                    <div class="text-center">
-                        <div class="s-48 my-3 font-weight-lighter">170</div>
-                        New Users
-                    </div>
-
                 </div>
-            </div>
+            </a>
         </div>
         <div class="col-md-3 col-sm-6">
-            <div class="card no-b mb-3">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div><i class="icon-package s-18"></i></div>
-                        <div><span class="text-success">40+35</span></div>
+            <a href="#" class="text-danger">
+                <div class="card no-b mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><i class="icon-work s-18"></i></div>
+                            <div><span class="badge badge-pill badge-danger">4:30</span></div>
+                        </div>
+                        <div class="text-center">
+                            <div class="s-48 my-3 font-weight-lighter">170</div>
+                            Unfinished Work
+                        </div>
                     </div>
-                    <div class="text-center">
-                        <div class="s-48 my-3 font-weight-lighter">35</div>
-                        New Products
-                    </div>
-
                 </div>
-            </div>
+            </a>
         </div>
         <div class="col-md-3 col-sm-6">
-            <div class="card no-b mb-3">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div><i class="icon-user-times s-18"></i></div>
-                        <div><span class="text-danger">50</span></div>
+            <a href="{{route('Tasks.create')}}" class="text-success">
+                <div class="card no-b mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><span class="text-success">40+35</span></div>
+                        </div>
+                        <div class="text-center">
+                            <div class="s-48 my-3 font-weight-lighter">
+                                <i class="icon-plus"></i>
+                            </div>
+                            Add Work To List
+                        </div>
                     </div>
-                    <div class="text-center">
-                        <div class="s-48 my-3 font-weight-lighter">95</div>
-                        Returning Users
-                    </div>
-
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 @endsection
