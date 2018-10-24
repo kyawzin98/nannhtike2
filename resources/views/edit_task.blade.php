@@ -5,6 +5,7 @@
             <div class="col-md-8 mx-auto">
                 <form action="{{route('Tasks.update',$task->id)}}" method="post">
                     @csrf
+                    @method('PATCH')
                     <div class="form-group">
                         <label for="">Customer Name</label>
                         <input type="text" class="form-control" name="customer_name" id="" value="{{$task->customer_name}}" placeholder="">

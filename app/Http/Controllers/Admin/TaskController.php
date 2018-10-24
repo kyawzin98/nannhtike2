@@ -76,7 +76,11 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $task=Task::find($id);
+        $data= $request->except(['_token']);
+        $task->update($data);
+
+        return redirect(route('Tasks.index'));
     }
 
     /**
